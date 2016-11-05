@@ -1,0 +1,27 @@
+{
+  "name": "sayit",
+  "version": "1.0.0",
+  "description": "blogsite",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "firebase": "^3.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "blog"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ani24sri/SayIt.git"
+  },
+  "keywords": [
+    "blogsite"
+  ],
+  "author": "Anirudh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ani24sri/SayIt/issues"
+  },
+  "homepage": "https://github.com/ani24sri/SayIt"
+}
