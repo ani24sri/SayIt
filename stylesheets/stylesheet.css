@@ -67,7 +67,21 @@ header h2 {
   font-weight: 300;
   color: #666;
 }
-
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #AAFFBB;
+  text-align: center;
+    align-content: center;
+}
+footer a img
+{
+    height: 40px;
+    width: 40px;
+}
 #downloads .btn {
   display: inline-block;
   text-align: center;
@@ -244,19 +258,4 @@ a {
 
 .cf {
   zoom:1;
-}
-footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #AAFFBB;
-  text-align: center;
-    align-content: center;
-}
-footer a img
-{
-    height: 40px;
-    width: 40px;
 }
