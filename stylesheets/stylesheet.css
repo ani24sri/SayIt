@@ -9,9 +9,12 @@ body {
 }
 
 /* General & 'Reset' Stuff */
-
+#music
+{
+    display: none;
+}
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -235,7 +238,23 @@ hr {
   opacity: 0.6;
   background: url("../images/blacktocat.png") 0 0 no-repeat;
 }
+/*
+    Search Boxes
+*/
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border : 0.6px light;
+    border-radius: 8px;
+}
 
+/* When the input field gets focus, change its width to 100% */
+.input[type=text]:focus {
+    width: 100%;
+    border : 0.6px light;
+    border-radius: 8px;
+}
 /* Links
    a, a:hover, a:visited
 */
