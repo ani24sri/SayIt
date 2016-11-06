@@ -8,23 +8,27 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+      <link rel="stylesheet" type="text/css" href="stylesheets/jquery.modal.min.css">
     <link rel="icon" href="/images/tesayit.ico">
+      <link href="http://vjs.zencdn.net/5.11.9/video-js.css" rel="stylesheet">
     <title>Sayit </title>
   </head>
+    <script src="javascripts/jquery.modal.min.js" type="application/javascript"></script>
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     <script src="javascripts/main.js"></script>
-  <body onload="playMusic()">
-      <audio id='music' src="https://drive.google.com/open?id=0B0E3qfVRb2weOHpydmFWRlZjbGc" preload="auto"></audio>
-    <header>
-      <div class="container">
-        <h1>Sayit</h1>
-        <h2>my own blogsite</h2>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://vjs.zencdn.net/5.11.9/video.js"></script>
           <script>
               $(document).ready(function ()
                                {
                  $('#banner').append(new Date().getFullYear().toString()); 
               });
           </script>
+  <body>     
+    <header>
+      <div class="container">
+        <h1>Sayit</h1>
+        <h2>my own blogsite</h2>
           <h3 id="banner"> Anirudh Srivastav </h3>
         <!--<section id="downloads">
           <a href="https://github.com/ani24sri/SayIt/zipball/master" class="btn">Download as .zip</a>
@@ -48,13 +52,22 @@
           <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Or browse some stuff like a Guest</h3>
           
-          <button class="btn" >Check out some content</button>
-          <input class="input" type="text" >
+          <a href="#intro" class="btn" rel="rel:open">Check out my Intro video</a>
+          <div class="container" style="display:none;" id="intro">
+              <a href="#" rel="modal:close">Close</a> 
+          <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    <source src="MY_VIDEO.mp4" type='video/mp4'>
+    <source src="MY_VIDEO.webm" type='video/webm'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+          </div>
       </section>
-        <section id="main_content">
-        
-        </section>
     </div>
+     
 <footer>
       <a href="https://github.com/ani24sri"><img src="images/github.png" alt="git"></a>
     <a href="https://in.linkedin.com/in/anirudh-srivastav-b3b458b9"><img src="images/linkedin.png" alt="git"></a>
