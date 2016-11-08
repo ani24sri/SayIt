@@ -8,26 +8,20 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-      <link rel="stylesheet" type="text/css" href="stylesheets/jquery.modal.min.css">
-    <link rel="icon" href="/images/tesayit.ico">
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="icon" href="images/tesayit.ico">
       <link href="http://vjs.zencdn.net/5.11.9/video-js.css" rel="stylesheet">
-    <title>Sayit </title>
+    <title>SayIt</title>
   </head>
-    <script src="javascripts/jquery.modal.min.js" type="application/javascript"></script>
     <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-    <script src="javascripts/main.js"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="http://vjs.zencdn.net/5.11.9/video.js"></script>
-          <script>
-              $(document).ready(function ()
-                               {
-                 $('#banner').append(new Date().getFullYear().toString()); 
-              });
-          </script>
+    <script src="javascripts/main.js"></script>   
   <body>     
     <header>
       <div class="container">
-        <h1>Sayit</h1>
+        <h1>SayIt</h1>
         <h2>my own blogsite</h2>
           <h3 id="banner"> Anirudh Srivastav </h3>
         <!--<section id="downloads">
@@ -47,18 +41,16 @@
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Start Here</h3>
-          <a href="">Login / Signup</a>
-          
+          <a target="_blank" href="http://sayit-021116.firebaseapp.com/">Login / Signup</a>
           <h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Or browse some stuff like a Guest</h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true">
+    <span aria-hidden="true" class="octicon octicon-link"></span></a>Or browse some stuff like a Guest</h3>
           
-          <a href="#intro" class="btn" rel="rel:open">Check out my Intro video</a>
-          <div class="container" style="display:none;" id="intro">
-              <a href="#" rel="modal:close">Close</a> 
+          <button class="btn" id="vid">Check out my Intro video</button>
+          <div class="container" style="display:none;" id="intro" title="intro video">
           <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-    <source src="MY_VIDEO.mp4" type='video/mp4'>
-    <source src="MY_VIDEO.webm" type='video/webm'>
+ <source src="images/WIN_20161104_20_20_45_Pro_CLIPCHAMP_keep.webm" type='video/webm'>
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a web browser that
       <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
