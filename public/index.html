@@ -18,14 +18,17 @@
   <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
- <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
- <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-messaging.js"></script>
+
+<!-- Leave out Storage -->
+<!-- <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-storage.js"></script> -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/additional-methods.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.1/additional-methods.min.js"></script>
 <script src="/js/form-validation.js"></script>
 <script>
   // Initialize Firebase
@@ -40,27 +43,29 @@
 
   var intro =document.getElementById('head');
   var dbref = firebase.database().ref().child('Title');
-  dbref.on('value', function(snapshot) {
-  intro.innerText = snapshot.val();
-});
-/* firebase.auth().onAuthStateChanged(function(user) {
+  dbref.on('value', snap=> intro.innerText =snap.val());
+  var user =firebase.auth().currentUser;
+
+firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
+    alert('User is logged in');
   } else {
     // No user is signed in.
+
   }
-});*/
+});
 var email =document.getElementById('inputEmail3').value;
 var password = document.getElementById('confirmPassword3').value;
 var createAccount = document.getElementById('registerUser');
-createAccount.onsubmit = function(){
+createAccount.on('submit', function(){
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
   // ...
 });
-};
+});
  
 </script>
  <noscript>
@@ -70,7 +75,10 @@ createAccount.onsubmit = function(){
       <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container-fluid">
               <h4 >./SayIt</h4>
-              <ul class="nav navbar-default"></ul>
+              <ul class="nav navbar-default navbar-collapse navbar-right">
+                <li><a class="active">Login</a></li>
+                <li><a>Register</a></li>
+              </ul>
           </div>
       </nav>
       <div class="bigpic"></div>

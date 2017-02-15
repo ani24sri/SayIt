@@ -30,7 +30,11 @@ $(function() {
         required: "Please provide a password",
         minlength: "Your password must be at least 8 characters long"
       },
-      emailIn: "Please enter a valid email address",
+      emailIn:
+      { 
+       required: "Please enter a valid email address",
+       email: "Your email address must be in the format of name@domain.com"
+      },
       confirmPass :
       {
           required : "Please enter password again",
