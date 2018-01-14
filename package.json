@@ -4,7 +4,6 @@
   "description": "blogsite",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "firebase": "^3.5.3"
   },
   "devDependencies": {},
