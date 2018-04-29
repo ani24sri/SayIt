@@ -1,9 +1,27 @@
-body
-{
-    padding-top: 50px;
+.speech-bubble {
+	position: relative;
+	background: #00090a;
+	border-radius: .4em;
 }
-nav h4 {
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 29px solid transparent;
+	border-top-color: #00090a;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -14.5px;
+	margin-bottom: -29px;
+}
+
+.logo {
   font-size: 30px;
+    content: "./ ";
   line-height: 1.5;
     border-image-repeat: no-repeat;
   margin: 0 0 0 -10px;
@@ -14,20 +32,15 @@ nav h4 {
                0 0 5px rgba(181, 232, 83, 0.1),
                0 0 10px rgba(181, 232, 83, 0.1);
   letter-spacing: -1px;
-  -webkit-font-smoothing: antialiased;
 }
 
-nav h4 {
-  content: "./ ";
-  font-size: 24px;
-}
-.bigpic {
+ .bigpic {
 position:fixed;
 width: 100%;
 height: 100%;
 display: block;
-z-index: -5;
-background-image: url('/img/sky.png');
+    z-index: -5;
+    background: url('/img/sky.png');
 }
 
 .bigletters {

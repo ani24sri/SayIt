@@ -25,16 +25,12 @@ $(function() {
     },
     // Specify validation error messages
     messages: {
-     
+
       passIn: {
         required: "Please provide a password",
         minlength: "Your password must be at least 8 characters long"
       },
-      emailIn:
-      { 
-       required: "Please enter a valid email address",
-       email: "Your email address must be in the format of name@domain.com"
-      },
+      emailIn: "Please enter a valid email address",
       confirmPass :
       {
           required : "Please enter password again",
@@ -43,8 +39,6 @@ $(function() {
     },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
-    submitHandler: function(form) {
-      form.submit();
-    }
+
   });
 });
