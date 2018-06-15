@@ -11,23 +11,38 @@
     </head>
 <body>
 
-  <div class="container-fluid">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarTogglerDemo01">
-                        <h4 class="logo">./SayIt</h4>
-                        <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerForm">
-  Register as User
-</button>
-</div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><b class="logo">./SayIt</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Login <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#registerForm" href="#">Register</a>
+          </li>
+          <!--<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>-->
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Find someone" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
 
       <div class="container">
     <div class="jumbotron">
@@ -36,7 +51,6 @@
       <h5>Join a community that is made by you and from you. The first of it's kind a
         decentralized social community where you are known for your contributions.
       </h5>
-      </div>
       <div class="container-fluid">
         <div class='row'>
           <div class='col-2'>
@@ -44,6 +58,8 @@
       </div>
       </div>
         </div>
+      </div>
+
       <div class="container-fluid">
 
       </div>
@@ -59,7 +75,7 @@
 </button>
 </div>
 <div class="modal-body">
-<form id="registerUser" class="form-horizontal">
+<form id="regFormin" class="form-horizontal">
 <div class="form-group">
   <div class='row'>
 <label for="inputEmail3" class="col-sm-2 text-primary">Email</label>
@@ -83,8 +99,8 @@
 </form>
 </div>
 <div class="modal-footer">
+  <button type="button" id="registerUser" class="btn btn-primary">Register</button>
 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary">Save changes</button>
 </div>
 </div>
 </div>
@@ -95,40 +111,45 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Sign in here,</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form id="registerUser" class="form-horizontal">
+        <form class="form-horizontal">
         <div class="form-group">
           <div class='row'>
         <label for="inputEmail3" class="col-sm-2 text-primary">Email</label>
         <div class="col-sm-8">
-        <input type="email" class="form-control" name="emailIn" id="inputEmail3" placeholder="Email">
+        <input type="email" class="form-control" name="emailIn" id="inputEmail4" placeholder="Email">
         </div>
         </div>
           <div class='row'>
         <label for="inputPassword3" class="col-sm-2 text-primary">Password</label>
         <div class="col-sm-8">
-        <input type="password" class="form-control"name="passIn" id="inputPassword3" placeholder="Password">
+        <input type="password" class="form-control"name="passIn" id="inputPassword4" placeholder="Password">
         </div>
         </div>
+        <div class="form-group form-check">
           <div class='row'>
-        </div>
-        </div>
+            <div class="col-sm-8">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          </div>
+            <label class="form-check-label col-sm-12" for="exampleCheck1">Remember Me</label>
+          </div>
+              </div>
+            </div>
                 </form>
 </div>
      <div class="modal-footer">
+       <button type="button" id="loginUser" class="btn btn-primary">Login</button>
        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       <button type="button" class="btn btn-primary">Save changes</button>
      </div>
    </div>
  </div>
 </div>
 <!--End Form-->
-</div>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
@@ -145,13 +166,14 @@ crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-messaging.js"></script>
+<script src="/js/site.js"></script>
 <!-- Leave out Storage -->
 <!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
    <script src="/js/form-validation.js"></script>
-   <script src="/js/site.js"></script>
+
 
     <noscript>
       Please enable JavaScript in your settings

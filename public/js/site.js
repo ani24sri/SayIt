@@ -22,18 +22,37 @@ var config = {
     var email =document.getElementById('inputEmail3').value;
     var password = document.getElementById('confirmPassword3').value;
     var createAccount = document.getElementById('registerUser');
-    createAccount.addEventListener('submit', function(){
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    createAccount.addEventListener('click', e => {
+      firebase.auth().createUserWithEmailAndPassword(email.trim(), password).catch(function(error) {
       // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorMessage);
-      // ...
-    });
-    var lgnEmail = document.getElementById('exampleInputEmail1').value;
-    var lgnPass = document.getElementById('exampleInputPassword1').value;
-    var lgnButton = document.getElementById('loginUser');
-    lgnButton.addEventListener('submit', function(){
-      firebase.auth().signInWithEmailAndPassword(lgnEmail,lgnPass).catch(e => console.log(e.message));
-    });
+      if(error){
+      console.log(error);
+    }
+    else{
+    console.log('No errors');
+  }
+});
+var user = firebase.auth().currentUser;
+
+user.sendEmailVerification().then(function() {
+  // Email sent.
+  console.log(user);
+}).catch(function(error) {
+  // An error happened.
+  if (error)
+  {
+    console.log(error);
+  }
+  else {
+    console.log('Email sent to verify');
+  }
+});
   });
+
+      var lgnEmail = document.getElementById('inputEmail4').value;
+    var lgnPass = document.getElementById('inputPassword4').value;
+    var lgnButton = document.getElementById('loginUser');
+    lgnButton.addEventListener('click', e => {
+      firebase.auth().signInWithEmailAndPassword(lgnEmail.trim(),lgnPass).catch(e => console.log(e.message));
+    });
+  
